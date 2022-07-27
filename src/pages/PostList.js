@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Pagination from "./Pagination";
+import Pagination from "../components/Pagination";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -53,6 +53,7 @@ const PostList = () => {
                 {post.map((obj, idx) => {
                   return (
                     <tr
+                      style={{ cursor: "pointer" }}
                       className="border-b"
                       key={idx}
                       onClick={() => clickPost(obj.id)}
