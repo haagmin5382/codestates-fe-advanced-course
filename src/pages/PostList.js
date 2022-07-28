@@ -7,6 +7,7 @@ const PostList = () => {
   const [post, setPost] = useState([
     { userId: 0, id: 0, title: null, body: null },
   ]);
+  const [page, setPage] = useState(1);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const PostList = () => {
       //   console.log((n - 1) * 10, (n - 1) * 10 + 10);
       setPost(data.slice((n - 1) * 10, (n - 1) * 10 + 10));
     });
+    setPage(n);
   };
 
   const clickPost = (n) => {
@@ -53,8 +55,7 @@ const PostList = () => {
                 {post.map((obj, idx) => {
                   return (
                     <tr
-                      style={{ cursor: "pointer" }}
-                      className="border-b"
+                      className="border-b hover:bg-gray-200 cursor-pointer"
                       key={idx}
                       onClick={() => clickPost(obj.id)}
                     >
@@ -73,7 +74,7 @@ const PostList = () => {
           </div>
         </div>
       </div>
-      <Pagination clickPage={clickPage} />
+      <Pagination clickPage={clickPage} page={page} />
     </div>
   );
 };

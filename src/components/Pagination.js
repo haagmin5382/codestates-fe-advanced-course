@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = ({ clickPage }) => {
+const Pagination = ({ clickPage, page }) => {
   return (
     <div
       className="
@@ -23,6 +23,11 @@ const Pagination = ({ clickPage }) => {
               }}
             >
               <a
+                style={
+                  number === page
+                    ? { color: "white", background: "black" }
+                    : null
+                }
                 href="javascript:void(0)"
                 className="
               w-9
@@ -33,7 +38,7 @@ const Pagination = ({ clickPage }) => {
               rounded-md
               border border-[#EDEFF1]
               text-[#838995] text-base
-              hover:bg-primary hover:border-primary hover:text-white
+              hover:bg-primary hover:border-primary hover:text-white hover:bg-gray-200
               "
               >
                 {number}
