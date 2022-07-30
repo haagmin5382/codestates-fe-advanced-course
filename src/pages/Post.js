@@ -23,7 +23,7 @@ const Post = () => {
     <>
       <div className="flex items-center justify-center ">
         {" "}
-        <div className="rounded-xl border p-5 shadow-md w-9/12 bg-white">
+        <div className="rounded-xl border p-5 shadow-md w-10/12 bg-white">
           <div className="flex w-full items-center justify-between border-b pb-3">
             <div className="flex items-center space-x-3">
               <div className="text-lg font-bold text-slate-700">
