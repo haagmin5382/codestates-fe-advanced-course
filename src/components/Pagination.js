@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 
 const Pagination = ({ clickPage, page }) => {
-  const [pagePlused, setPagePlused] = useState(0);
-  const goPrevious = () => {
-    if (page > 5) {
-      clickPage(page - 5);
-      setPagePlused(pagePlused - 5);
-    }
-  };
+  const [pages, setPages] = useState([1, 2, 3, 4, 5]);
 
   const goNext = () => {
     if (page < 6) {
-      clickPage(page + 5);
-      setPagePlused(pagePlused + 5);
+      setPages(pages.map((el) => el + 5)); // 다음에 보여줄 페이지 리스트
+      clickPage(pages[4] + 1);
     }
   };
-  console.log("page : ", page, "pagePlused : ", pagePlused);
+  const goPrevious = () => {
+    if (page > 5) {
+      setPages(pages.map((el) => el - 5)); // 이전에 보여줄 페이지 리스트
+      clickPage(pages[0] - 5);
+    }
+  };
+
+  console.log(pages);
+  console.log("page : ", page);
   return (
     <div
       className="
@@ -47,18 +49,18 @@ const Pagination = ({ clickPage, page }) => {
             &#60;
           </a>
         </li>
-        {[1, 2, 3, 4, 5].map((number, idx) => {
+        {pages.map((number, idx) => {
           return (
             <li
               className="px-[6px]"
               key={idx}
               onClick={() => {
-                clickPage(number + pagePlused);
+                clickPage(number);
               }}
             >
               <a
                 style={
-                  number + pagePlused === page
+                  number === page
                     ? { color: "white", background: "black" }
                     : null
                 }
@@ -76,7 +78,7 @@ const Pagination = ({ clickPage, page }) => {
               hover:bg-primary hover:border-primary hover:text-white hover:bg-gray-200
               "
               >
-                {number + pagePlused}
+                {number}
               </a>
             </li>
           );

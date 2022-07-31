@@ -39,13 +39,13 @@ const PostList = () => {
                 <tr>
                   <th
                     scope="col"
-                    className="text-sm font-medium text-gray-900  py-4"
+                    className="text-sm font-medium text-gray-900  py-4 "
                   >
                     ID
                   </th>
                   <th
                     scope="col"
-                    className="text-sm font-medium text-gray-900 py-4"
+                    className="text-sm font-medium text-gray-900 py-4 "
                   >
                     Title
                   </th>
@@ -55,14 +55,14 @@ const PostList = () => {
                 {post.map((obj, idx) => {
                   return (
                     <tr
-                      className="border-b hover:bg-gray-200 cursor-pointer"
+                      className="border-b hover:bg-gray-200 cursor-pointer "
                       key={idx}
                       onClick={() => clickPost(obj.id)}
                     >
-                      <td className="text-sm text-gray-900 font-medium py-4 whitespace-nowrap">
+                      <td className="text-sm text-gray-900 font-medium py-4 whitespace-nowrap ">
                         {obj.userId}
                       </td>
-                      <td className="text-sm text-gray-900 font-light py-4 whitespace-nowrap">
+                      <td className="text-sm text-gray-900 font-light py-4 whitespace-nowrap ">
                         {obj.title}
                       </td>
                     </tr>
