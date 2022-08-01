@@ -2,11 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <h1 className="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600 text-center ">
-        codestates-fe-advanced-course
-      </h1>
-    </div>
+    <header className="flex w-full items-center justify-center border-b-2 border-gray-200 bg-white p-5 ">
+      <h1 className="text-lg font-bold">CODESTATES-FE-ADVANCED-COURSE</h1>
+    </header>
   );
 };
 

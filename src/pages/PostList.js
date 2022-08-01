@@ -30,7 +30,7 @@ const PostList = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <main className="flex flex-col">
       <div>
         <div className="">
           <div className="overflow-hidden">
@@ -74,7 +74,7 @@ const PostList = () => {
         </div>
       </div>
       <Pagination clickPage={clickPage} page={page} />
-    </div>
+    </main>
   );
 };
 
