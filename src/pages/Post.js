@@ -20,7 +20,7 @@ const Post = () => {
   }, []);
 
   return (
-    <main className="h-auto min-h-full pb-12">
+    <main className="h-auto min-h-full pb-96">
       <div className="flex items-center justify-center ">
         {" "}
         <div className="rounded-xl border p-5 shadow-md w-10/12 bg-white">

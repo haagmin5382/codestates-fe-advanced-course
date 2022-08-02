@@ -30,7 +30,7 @@ const PostList = () => {
   };
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col pb-10">
       <div>
         <div className="">
           <div className="overflow-hidden">
