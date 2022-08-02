@@ -17,9 +17,9 @@
 ### `게시물 페이지`
 
 - 게시물 리스트에서 게시물 제목을 클릭하면 해당 게시물로 페이지가 이동하고 게시물 제목과 함계 게시물 내용이 나오게 된다.
-![post](https://user-images.githubusercontent.com/81218474/182319422-dc4c6839-b645-429a-bddd-1f577f618bfe.gif)
-
 
 ### `댓글보기 기능`
 
 - 해당 게시물에서 '댓글보기' 를 클릭하면 해당 게시물에 달린 댓글들이 나오게 된다.
+
+![post](https://user-images.githubusercontent.com/81218474/182319422-dc4c6839-b645-429a-bddd-1f577f618bfe.gif)
