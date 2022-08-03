@@ -8,12 +8,9 @@ const Comments = ({ setCommentNumber, comment }) => {
   ]);
   const params = useParams();
   useEffect(() => {
-    // console.log(typeof params.id); // string
     axios
       .get("https://jsonplaceholder.typicode.com/comments")
       .then(({ data }) => {
-        // console.log(typeof data[0].postId); // number
-        // console.log(data.filter((obj) => obj.postId === Number(params.id)));
         setCommentData(data.filter((obj) => obj.postId === Number(params.id)));
         setCommentNumber(
           data.filter((obj) => obj.postId === Number(params.id)).length

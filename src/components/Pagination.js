@@ -12,12 +12,10 @@ const Pagination = ({ clickPage, page }) => {
   const goPrevious = () => {
     if (page > 5) {
       setPages(pages.map((el) => el - 5)); // 이전에 보여줄 페이지 리스트
-      clickPage(pages[0] - 5);
+      clickPage(pages[0] - 1);
     }
   };
 
-  console.log(pages);
-  console.log("page : ", page);
   return (
     <div
       className="

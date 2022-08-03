@@ -13,7 +13,6 @@ const Post = () => {
   const [comment, setComment] = useState(false);
   const params = useParams();
   useEffect(() => {
-    console.log(params.id);
     axios
       .get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
       .then(({ data }) => setContent(data));

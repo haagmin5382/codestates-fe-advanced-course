@@ -12,14 +12,12 @@ const PostList = () => {
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then(({ data }) => {
-      // console.log(data.slice(0, 10));
       setPost(data.slice(0, 10));
     });
   }, []);
 
   const clickPage = (n) => {
     axios.get("https://jsonplaceholder.typicode.com/posts").then(({ data }) => {
-      //   console.log((n - 1) * 10, (n - 1) * 10 + 10);
       setPost(data.slice((n - 1) * 10, (n - 1) * 10 + 10));
     });
     setPage(n);
